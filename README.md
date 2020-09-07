@@ -14,9 +14,15 @@ char(XXX) - base10<br>
 char(XXX,XXX,...) - base10<br>
 \\\\XXX... - base8<br>
 
-
 ### options
 -l --lowercase convert output to lowercase<br>
 -p --plus remove plus signs from output<br>
 -i --input input path<br>
 -o --output output path<br>
+
+### examples
+send contents of log.file via stdin and output to results.txt<br>
+>cat log.file | deobfucate >> results.txt<br>
+
+process ./logs/*.log files and output to ./dbfctd/<br>
+>deobfuscate -i ./logs/*.log -o ./dbfctd/<br>
