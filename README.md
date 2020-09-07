@@ -18,5 +18,5 @@ char(XXX,XXX,...) - base10<br>
 ### options
 -l --lowercase convert output to lowercase<br>
 -p --plus remove plus signs from output<br>
--i --input path<br>
--o --output path<br>
+-i --input input path<br>
+-o --output output path<br>
