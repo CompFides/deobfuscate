@@ -22,7 +22,7 @@ char(XXX,XXX,...) - base10<br>
 
 ### examples
 send contents of log.file via stdin and output to results.txt<br>
->cat log.file | deobfucate >> results.txt<br>
+>cat log.file | deobfuscate.py >> results.txt<br>
 
 process ./logs/*.log files and output to ./dbfctd/<br>
->deobfuscate -i ./logs/*.log -o ./dbfctd/<br>
+>deobfuscate.py -i ./logs/*.log -o ./dbfctd/<br>
