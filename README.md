@@ -1,7 +1,7 @@
 # deobfuscate
 Converts files obfuscated with multiple layers of encodings, to ascii<br>
 
-##supported encodings
+### supported encodings
 %XX - base16<br>
 &#xXX - base16<br>
 0xXX - base16<br>
@@ -14,7 +14,7 @@ char(XXX,XXX,...) - base10<br>
 \\\\XXX... - base8<br>
 
 
-## options
+### options
 -l --lowercase convert output to lowercase<br>
 -p --plus remove plus signs from output<br>
 -i --input path to source files(s)<br>
