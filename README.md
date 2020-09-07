@@ -1,5 +1,5 @@
 # deobfuscate
-Converts files obfuscated with multiple layers of encodings, to ascii<br>
+Converts input obfuscated with multiple layers of encodings, to ascii<br>
 Handles stdin, file and directory names 
 
 ### supported encodings
@@ -18,5 +18,5 @@ char(XXX,XXX,...) - base10<br>
 ### options
 -l --lowercase convert output to lowercase<br>
 -p --plus remove plus signs from output<br>
--i --input path to source files(s)<br>
--o --output path to output directory
+-i --input path<br>
+-o --output path<br>
