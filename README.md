@@ -1,7 +1,7 @@
 # deobfuscate
 Converts files obfuscated with multiple layers of encodings, to ascii<br>
 
-##supported encodings:
+##supported encodings
 %XX - base16<br>
 &#xXX - base16<br>
 0xXX - base16<br>
