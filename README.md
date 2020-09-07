@@ -21,8 +21,8 @@ char(XXX,XXX,...) - base10<br>
 -o --output output path<br>
 
 ### examples
-send contents of log.file via stdin and outputs to results.txt<br>
->cat log.file | deobfuscate.py >> results.txt<br>
+send contents of file.log via stdin and outputs to results.txt<br>
+>cat file.log | deobfuscate.py >> results.txt<br>
 
 process ./logs/*.log files and output to ./dbfctd/<br>
 >deobfuscate.py -i ./logs/*.log -o ./dbfctd/<br>
