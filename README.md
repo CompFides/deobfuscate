@@ -1,5 +1,6 @@
 # deobfuscate
 Converts files obfuscated with multiple layers of encodings, to ascii<br>
+Handles stdin, file and directory names 
 
 ### supported encodings
 %XX - base16<br>
@@ -19,12 +20,3 @@ char(XXX,XXX,...) - base10<br>
 -p --plus remove plus signs from output<br>
 -i --input path to source files(s)<br>
 -o --output path to output directory
-
-### examples
-capture stdin and output to stdout<br>
-    cat apache.log | deobfuscate.py<br>
-<br>
-process an entire directory of files with the extensiton .log and output to local directory dbfcctd<br>
-  note: filenames with be appended with '_dbfsctd' but will retain their original extensions<br>     
-    deobfuscate -i ./path/to/files/*.log -o ./dbfctd/ 
-
