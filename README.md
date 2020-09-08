@@ -7,8 +7,8 @@ Handles stdin, file and directory names
 &#xXX - base16<br>
 0xXX - base16<br>
 \\xXX - base16<br>
+char(0xXX) - base16<br>
 &#XX - base10<br>
-char(0xXX) - base10<br>
 chr(XX) - base10<br>
 char(XXX) - base10<br>
 char(XXX,XXX,...) - base10<br>
