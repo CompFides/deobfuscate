@@ -23,13 +23,19 @@ char(XXX,XXX,...)<br>
 
 ## Custom Splunk Search Command
 ### Installation
-##### Create an App via the Splunk Web Interface
+##### Create an App in the Splunk Web Interface
 Click on "Apps" > "Manage Apps"<br>
 Click on "Create app"<br>
 
 ##### Fill in the following
 Name: deobfuscate<br>
 Folder name: deobfuscate<br>
+Click on "Save"<br>
+
+##### Set permissions
+Click on the "Permissions" link for the deobfuscate app <br>
+##### Apply selected role permissions to:
+Select "All apps(system)"<br>
 Click on "Save"<br>
 
 ##### Copy deobfuscate.py
