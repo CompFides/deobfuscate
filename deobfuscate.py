@@ -20,22 +20,16 @@ parser.add_argument('-i', '--input', nargs='*', type=str, default=sys.stdin, hel
 parser.add_argument('-o', '--output', nargs='?', type=str, help='path to output directory')
 args = parser.parse_args()
 
-def urlhex2ascii(matchobj):
-    # %XX or &#xXX;
+def urlhex2ascii(matchobj):  # %XX or &#xXX;
     return chr(int(matchobj.group(1),16))
 
-def urldec2ascii(matchobj):
-    # &#XX
+def urldec2ascii(matchobj):  # &#XX
     return chr(int(matchobj.group(1)))
 
-def char0xXX2ascii(matchobj):
-    # char(0xXX)
+def char0xXX2ascii(matchobj):  # char(0xXX)
     return chr(int(matchobj.group(1)))
 
-def char2ascii(matchobj):
-    # chr(XX)
-    # char(XXX)
-    # char(XXX,XXX,...)
+def char2ascii(matchobj):  # chr(XX), char(XXX), char(XXX,XXX,...)
     ascii = ''
     # check to for single code or list
     if not((matchobj.group(1)).find(',')):
@@ -48,12 +42,10 @@ def char2ascii(matchobj):
             ascii += chr(int(theitem))
     return ascii
 
-def octal2ascii(matchobj):
-    # \\XXX...
+def octal2ascii(matchobj):  # \\XXX...
     return ''.join(chr(int(matchobj.group(2)[i:i+2], 8)) for i in range(0, len(matchobj.group(2)), 2))
 
-def hex2ascii(matchobj):
-    # 0xXX or \xXX
+def hex2ascii(matchobj):  # 0xXX, \xXX
     return ''.join(chr(int(matchobj.group(2)[i:i+2], 16)) for i in range(0, len(matchobj.group(2)), 2))
 
 def deobfuscate(the_line):
@@ -63,7 +55,7 @@ def deobfuscate(the_line):
     # declare variables for regex searches
     urlhex = re.compile(r'%([a-f0-9]{2,2})', flags=re.I) # %XX
     urlhex2 = re.compile(r'&#x([a-f0-9]{2,2})(;)', flags=re.I) # &#xXX;
-    hexstr = re.compile(r'(0x|\\x)([a-f0-9]+)', flags=re.I)  # 0xXX..., \xXX...
+    hexstr = re.compile(r'([0|\\]x)([a-f0-9]+)', flags=re.I)  # 0xXX..., \xXX...
     urldec = re.compile(r'&#([0-9]{2,3})', flags=re.I) # &#XX
     char0xXX = re.compile(r'\bchar\(0x([a-f0-9]{2,3})\)', flags=re.I) # char(0xXX)
     charXXX = re.compile(r'\b(cha?r)\(([0-9]{2,3})(,\s*\d+)*\)', flags=re.I) # chr(XX), char(XXX), char(XX,XXX,...)
