@@ -33,10 +33,10 @@ Folder name: deobfuscate<br>
 Click on "Save"<br>
 
 ##### Copy deobfuscate.py
-> cp ./bin/deobfuscate.py $SPLUNK_HOME/etc/apps/deobfuscate/bin/<br>
+> cp ./deobfuscate_splunk_app/bin/deobfuscate.py $SPLUNK_HOME/etc/apps/deobfuscate/bin/<br>
 
 ##### Copy commands.conf 
->cp ./default/commands.conf $SPLUNK_HOME/etc/apps/deobfuscate/default/<br>
+>cp ./deobfuscate_splunk_app/default/commands.conf $SPLUNK_HOME/etc/apps/deobfuscate/default/<br>
 
 #### Install splunk-sdk
 ##### Move to deobfuscate bin directory
