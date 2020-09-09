@@ -1,6 +1,6 @@
 # deobfuscate
 Converts files obfuscated with multiple layers of encodings, to ascii<br>
-Also Contains a custom Splunk search command that deobfuscates event streams.<br>
+Project also contains a custom Splunk search command that deobfuscates event streams.<br>
 
 #### supported encodings:
 %XX<br>
