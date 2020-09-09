@@ -22,7 +22,7 @@ char(XXX,XXX,...)<br>
 -o --output path<br>
 
 ## Custom Splunk Search Command
-###Installation
+### Installation
 ##### Create an App in the Splunk Web Interface
 Click on "Apps" > "Manage Apps"<br>
 Click on "Create app"<br>
