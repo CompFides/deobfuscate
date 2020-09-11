@@ -1,5 +1,5 @@
 # deobfuscate
-Decodes stdin or file(s) obfuscated with multiple layers of encodings.<br>
+Decodes stdin or file(s) obfuscated with multiple layers of encodings to ascii.<br>
 Output file names are appended with '_dbfsctd' to prevent overwriting originals.<br>
 Project has also been ported to a Splunk custom search app.<br>
 
