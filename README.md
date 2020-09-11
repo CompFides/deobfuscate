@@ -34,7 +34,7 @@ process file.ext and output to stdout<br>
 process all *.ext files in ./file/location/ and output to ./output/<br>
 > deobfuscate.py -i ./file/location/*.ext -o ./output/<br>
 
-## Custom Splunk Search Command
+## Splunk Custom Search Command
 ### Installation
 #### Create an App via the Splunk Web Interface
 Click **Apps** > **Manage Apps**<br>
