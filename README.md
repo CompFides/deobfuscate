@@ -1,5 +1,5 @@
 # deobfuscate
-Decodes stdin or file(s) obfuscated with multiple layers of encodings to ascii.<br>
+Decodes stdin or file(s) obfuscated with multiple layers of encodings.<br>
 Output file names are appended with '_dbfsctd' to prevent overwriting originals.<br>
 Project has also been ported to a Splunk custom search app.<br>
 
@@ -34,7 +34,7 @@ process file.ext and output to stdout<br>
 process all *.ext files in ./file/location/ and output to ./output/<br>
 > deobfuscate.py -i ./file/location/*.ext -o ./output/<br>
 
-## Splunk Custom Search Command
+## Custom Splunk Search Command
 ### Installation
 #### Create an App via the Splunk Web Interface
 Click **Apps** > **Manage Apps**<br>
