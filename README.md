@@ -1,5 +1,5 @@
 # deobfuscate
-Decodes stdin or file(s) obfuscated with multiple layers of encodings.<br>
+Decodes stdin or file(s) obfuscated with multiple layers of encodings to ascii.<br>
 Output file names are appended with '_dbfsctd' to prevent overwriting originals.<br>
 Project has also been ported to a Splunk custom search app.<br>
 
@@ -34,7 +34,7 @@ process file.ext and output to stdout<br>
 process all *.ext files in ./file/location/ and output to ./output/<br>
 > deobfuscate.py -i ./file/location/*.ext -o ./output/<br>
 
-## Custom Splunk Search Command
+## Splunk Custom Search Command
 ### Installation
 #### Create an App via the Splunk Web Interface
 Click **Apps** > **Manage Apps**<br>
@@ -52,6 +52,9 @@ Click **Permissions** link for the deobfuscate app <br>
 Check to ensure **Everyone** role has **"Read"** permissions<br>
 **Apply selected role permissions to:** select **All apps (system)**<br>
 Click **"Save"**<br>
+
+#### Copy deobfuscate.py
+>cp ./deobfuscate/deobfuscate.py $SPLUNK_HOME/etc/apps/deobfuscate/bin/
 
 #### Copy deobfuscate_splunk.py
 >cp ./deobfuscate/splunk/bin/deobfuscate_splunk.py $SPLUNK_HOME/etc/apps/deobfuscate/bin/<br>
